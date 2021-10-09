@@ -40,6 +40,7 @@ def main():
                     continue
                 elif node.move not in list(newmoves):
                     nvnode = vnode.add_variation(node.move)
+                    nvnode.comment = node.comment
                     if len(node.variations) > 0:
                         done = False
                     newvars.append((nvnode, node.variations))
